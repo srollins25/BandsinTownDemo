@@ -13,6 +13,8 @@
 		E2420D172356BECB00870C49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2420D162356BECB00870C49 /* Assets.xcassets */; };
 		E2420D1A2356BECB00870C49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2420D182356BECB00870C49 /* LaunchScreen.storyboard */; };
 		E2420D1D2356BECB00870C49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2420D1C2356BECB00870C49 /* main.m */; };
+		E2420D252356C39800870C49 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2420D242356C39800870C49 /* SearchViewController.swift */; };
+		E2420D272356D07100870C49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2420D262356D07100870C49 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		E2420D192356BECB00870C49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2420D1B2356BECB00870C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2420D1C2356BECB00870C49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2420D232356C39700870C49 /* BandsinTownDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BandsinTownDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2420D242356C39800870C49 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E2420D262356D07100870C49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,9 @@
 				E2420D182356BECB00870C49 /* LaunchScreen.storyboard */,
 				E2420D1B2356BECB00870C49 /* Info.plist */,
 				E2420D1C2356BECB00870C49 /* main.m */,
+				E2420D242356C39800870C49 /* SearchViewController.swift */,
+				E2420D232356C39700870C49 /* BandsinTownDemo-Bridging-Header.h */,
+				E2420D262356D07100870C49 /* User.swift */,
 			);
 			path = BandsinTownDemo;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 				TargetAttributes = {
 					E2420D092356BEC900870C49 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -141,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2420D272356D07100870C49 /* User.swift in Sources */,
 				E2420D122356BEC900870C49 /* ViewController.m in Sources */,
 				E2420D1D2356BECB00870C49 /* main.m in Sources */,
+				E2420D252356C39800870C49 /* SearchViewController.swift in Sources */,
 				E2420D0F2356BEC900870C49 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KBSTWFQ9TX;
 				INFOPLIST_FILE = BandsinTownDemo/Info.plist;
@@ -294,6 +306,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OmniStack.BandsinTownDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BandsinTownDemo/BandsinTownDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KBSTWFQ9TX;
 				INFOPLIST_FILE = BandsinTownDemo/Info.plist;
@@ -311,6 +327,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OmniStack.BandsinTownDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BandsinTownDemo/BandsinTownDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

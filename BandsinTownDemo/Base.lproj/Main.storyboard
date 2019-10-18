@@ -19,19 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFm-9j-NTK" userLabel="secondView">
-                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="126" width="414" height="770"/>
                                 <connections>
                                     <segue destination="F74-xa-QBm" kind="embed" id="DjI-F7-XO3"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1Y-Xj-LXJ" userLabel="firstView">
-                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="126" width="414" height="770"/>
                                 <connections>
                                     <segue destination="se5-W3-xI6" kind="embed" id="ApN-Hd-i9O"/>
                                 </connections>
                             </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-iu-OcK">
-                                <rect key="frame" x="55" y="96" width="305" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-iu-OcK">
+                                <rect key="frame" x="54" y="89" width="306" height="29"/>
                                 <segments>
                                     <segment title="Artists"/>
                                     <segment title="Favorites"/>
@@ -44,12 +44,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="E1Y-Xj-LXJ" secondAttribute="trailing" id="27k-mA-2vy"/>
-                            <constraint firstItem="rFm-9j-NTK" firstAttribute="top" secondItem="rOV-iu-OcK" secondAttribute="bottom" constant="14" id="BRP-ur-Qyg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rOV-iu-OcK" secondAttribute="trailing" constant="54" id="39U-b8-2Jg"/>
+                            <constraint firstItem="rFm-9j-NTK" firstAttribute="top" secondItem="rOV-iu-OcK" secondAttribute="bottom" constant="8" id="BRP-ur-Qyg"/>
+                            <constraint firstItem="rOV-iu-OcK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="EJz-U3-paz"/>
                             <constraint firstAttribute="bottom" secondItem="E1Y-Xj-LXJ" secondAttribute="bottom" id="IOV-rj-cOT"/>
                             <constraint firstItem="E1Y-Xj-LXJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OPt-gZ-PGQ"/>
                             <constraint firstAttribute="bottom" secondItem="rFm-9j-NTK" secondAttribute="bottom" id="ORE-My-XNt"/>
-                            <constraint firstItem="rOV-iu-OcK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="XQF-z2-GAA"/>
-                            <constraint firstItem="E1Y-Xj-LXJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="138" id="c3Y-c4-WUf"/>
+                            <constraint firstItem="rOV-iu-OcK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="XQF-z2-GAA"/>
+                            <constraint firstItem="E1Y-Xj-LXJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="126" id="c3Y-c4-WUf"/>
                             <constraint firstItem="rFm-9j-NTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fDb-rm-jVA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rFm-9j-NTK" secondAttribute="trailing" id="ojC-xM-xjg"/>
                             <constraint firstItem="rOV-iu-OcK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ucX-zn-zCr"/>
@@ -72,7 +74,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pv5-rq-0fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="F74-xa-QBm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7kV-gU-c4R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="0.87917380140000001" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -85,12 +87,26 @@
             <objects>
                 <viewController id="se5-W3-xI6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cy4-5n-J2T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IV1-Oh-N7y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MhD-b0-sUk"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.63137254899999995" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IV1-Oh-N7y" secondAttribute="trailing" id="0CI-lP-sNI"/>
+                            <constraint firstItem="IV1-Oh-N7y" firstAttribute="leading" secondItem="Cy4-5n-J2T" secondAttribute="leading" id="UHV-j4-IdN"/>
+                            <constraint firstItem="IV1-Oh-N7y" firstAttribute="top" secondItem="Cy4-5n-J2T" secondAttribute="top" id="oMq-c1-MDt"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchDisplayController" destination="nNl-Wl-00I" id="NcO-N5-93E"/>
+                        <outlet property="searchDisplayController" destination="NpY-0D-El8" id="LMW-Qy-WIs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmy-Fs-Zcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,16 +118,8 @@
                         <outlet property="searchResultsDelegate" destination="se5-W3-xI6" id="hCI-3u-gqF"/>
                     </connections>
                 </searchDisplayController>
-                <searchDisplayController id="nNl-Wl-00I">
-                    <connections>
-                        <outlet property="delegate" destination="se5-W3-xI6" id="ONl-qE-xGA"/>
-                        <outlet property="searchContentsController" destination="se5-W3-xI6" id="VVw-rg-Pmg"/>
-                        <outlet property="searchResultsDataSource" destination="se5-W3-xI6" id="z0W-74-Fnp"/>
-                        <outlet property="searchResultsDelegate" destination="se5-W3-xI6" id="JlX-ZO-JWx"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-81" y="33"/>
+            <point key="canvasLocation" x="-81.159420289855078" y="32.8125"/>
         </scene>
     </scenes>
 </document>

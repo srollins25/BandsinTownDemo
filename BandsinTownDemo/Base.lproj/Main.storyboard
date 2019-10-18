@@ -18,6 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-iu-OcK">
+                                <rect key="frame" x="54" y="90" width="306" height="29"/>
+                                <segments>
+                                    <segment title="Artists"/>
+                                    <segment title="Favorites"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeView:" destination="BYZ-38-t0r" eventType="valueChanged" id="0J4-mQ-zTp"/>
+                                </connections>
+                            </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFm-9j-NTK" userLabel="secondView">
                                 <rect key="frame" x="0.0" y="126" width="414" height="770"/>
                                 <connections>
@@ -30,16 +40,12 @@
                                     <segue destination="se5-W3-xI6" kind="embed" id="ApN-Hd-i9O"/>
                                 </connections>
                             </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-iu-OcK">
-                                <rect key="frame" x="54" y="89" width="306" height="29"/>
-                                <segments>
-                                    <segment title="Artists"/>
-                                    <segment title="Favorites"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeView:" destination="BYZ-38-t0r" eventType="valueChanged" id="0J4-mQ-zTp"/>
-                                </connections>
-                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artists" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-G8-EXk">
+                                <rect key="frame" x="164" y="49" width="87" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -47,12 +53,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rOV-iu-OcK" secondAttribute="trailing" constant="54" id="39U-b8-2Jg"/>
                             <constraint firstItem="rFm-9j-NTK" firstAttribute="top" secondItem="rOV-iu-OcK" secondAttribute="bottom" constant="8" id="BRP-ur-Qyg"/>
                             <constraint firstItem="rOV-iu-OcK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="EJz-U3-paz"/>
+                            <constraint firstItem="rOV-iu-OcK" firstAttribute="top" secondItem="fzn-G8-EXk" secondAttribute="bottom" constant="8" symbolic="YES" id="HbK-Io-ACf"/>
                             <constraint firstAttribute="bottom" secondItem="E1Y-Xj-LXJ" secondAttribute="bottom" id="IOV-rj-cOT"/>
                             <constraint firstItem="E1Y-Xj-LXJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OPt-gZ-PGQ"/>
                             <constraint firstAttribute="bottom" secondItem="rFm-9j-NTK" secondAttribute="bottom" id="ORE-My-XNt"/>
+                            <constraint firstItem="fzn-G8-EXk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="TRl-NY-lY5"/>
                             <constraint firstItem="rOV-iu-OcK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="XQF-z2-GAA"/>
                             <constraint firstItem="E1Y-Xj-LXJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="126" id="c3Y-c4-WUf"/>
                             <constraint firstItem="rFm-9j-NTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fDb-rm-jVA"/>
+                            <constraint firstItem="fzn-G8-EXk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="jU4-Ij-HLp"/>
+                            <constraint firstItem="fzn-G8-EXk" firstAttribute="centerX" secondItem="rOV-iu-OcK" secondAttribute="centerX" id="mOa-oy-srt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rFm-9j-NTK" secondAttribute="trailing" id="ojC-xM-xjg"/>
                             <constraint firstItem="rOV-iu-OcK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ucX-zn-zCr"/>
                         </constraints>

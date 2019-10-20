@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating {
+
+class SearchViewController: UIViewController, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating, UITableViewDataSource, UITableViewDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
 
@@ -17,18 +18,21 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchDispl
 
     @IBOutlet weak var artistsView: UIView!
     @IBOutlet weak var favoritesView: UIView!
-    var users = [User]()
-    var searchUser = [User]()
+    @IBOutlet weak var searchTblView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    var artists = [Artist]()
+    //let headers = ["x-api-key": "EJqbBuarkq7bNqBZgNnaA6hPG5b0HzAY1q6CBAF4"]
+    //var searchUser = [User]()
+    //https://search.bandsintown.com/search?query=%7B%22term%22%3A%22John%22%2C%22entities%22%3A% 5B%7B%22type%22%3A%22artist%22%7D%5D%7D​
     var searching = false
+    var searchArtist = [Artist]()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
+        
         //navigationItem.title = "test"
         //view.backgroundColor = .red
         // Do any additional setup after loading the view.
-    }
+    
     
     @IBAction func changeView(_ sender: UISegmentedControl)
     {
@@ -54,5 +58,65 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchDispl
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searching)
+        {
+            //set cell pic, label, and fav button
+            return searchArtist.count
+        }
+        else
+        {
+            //set cell pic, label, and fav button
+            return artists.count
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! ArtistCell
+        
+        if(searching)
+        {
+            //set cell pic, label, and fav button
+        }
+        else
+        {
+            //set cell pic, label, and fav button
+        }
+        
+        return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String) {
+        searchArtist = artists.filter({$0.name!.lowercased().prefix(textSearched.count) == textSearched.lowercased()})
+        searching = true
+        searchTblView.reloadData()
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

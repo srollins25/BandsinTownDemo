@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class User: NSObject
+class Artist: NSObject
 {
     var id: String?
     var media_id: String?

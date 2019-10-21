@@ -12,10 +12,10 @@ import UIKit
 class Artist: NSObject
 {
     var id: String?
-    var media_id: String?
-    var on_tour: Bool?
-    var image: String?
+    //var media_id: String?
+    //var on_tour: Bool?
+    var image_url: String?
     var name: String?
-    var tracker_count: String?
-    var verified: Bool?
+    var upcoming_event_count: NSNumber?
+    //var verified: Bool?
 }

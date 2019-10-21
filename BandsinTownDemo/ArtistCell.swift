@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ArtistCell: UITableViewCell, UITableViewDelegate {
+class ArtistCell: UITableViewCell {
     
     
     var mainImage : UIImage?
@@ -45,7 +45,9 @@ class ArtistCell: UITableViewCell, UITableViewDelegate {
     }
     
     required init?(coder aDecoder: NSCoder) {
+        //super.init(coder: aDecoder)
         fatalError("init(coder:) has not been implemented")
+        
     }
 }
 

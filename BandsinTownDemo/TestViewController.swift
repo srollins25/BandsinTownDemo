@@ -22,7 +22,7 @@ class TestViewController: UIViewController {
     
 
     @IBAction func requestButton(_ sender: Any) {
-        guard let urlToExecute = URL(string: "https://search.bandsintown.com/search?query=%7B%22term%22%3A%22John%22%2C%22entities%22%3A%5B%7B%22type%22%3A%22artist%22%7D%5D%7D")
+        guard let urlToExecute = URL(string:  "https://rest.bandsintown.com/artists/LilWayne?app_id=test" /* "https://search.bandsintown.com/search?query=%7B%22term%22%3A%22Lil%22%2C%22entities%22%3A%5B%7B%22type%22%3A%22artist%22%7D%5D%7D" */)
         else
         {
             return
@@ -36,6 +36,7 @@ class TestViewController: UIViewController {
             
             else if let json = json {
                 self.textView.text = json.description
+                print(json.description)
             }
         }
     }
